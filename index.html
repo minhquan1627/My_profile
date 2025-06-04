@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Landing Page</title>
+  <link rel="stylesheet" href="index.css">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+/>
+
+</head>
+<body>
+  <nav>
+    <a href="#about">About Me</a>
+    <a href="#projects">My Project</a>
+    <a href="#skills">My Skill</a>
+    <a href="#contact">Contact Me</a>
+  </nav>
+
+  <section id="about" class="about">
+    <div class="about-left fade-in-left">
+      <div class="triangle-bg">
+        <img src="My_Profile.png" alt="My Photo">
+        <h1>Your Name</h1>
+        <h3>Full Stack Developer Website</h3>
+      </div>
+    </div>
+    <div class="about-right fade-in-right">
+      <h3>Your University</h3>
+      <p>Bachelor of Computer Science</p>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>My Projects</h2>
+    <div class="projects">
+      <div class="project">
+        <div class="fade-in-left">
+          <h3>Logistics Online</h3>
+          <p>Role: Full stack</p>
+        </div>
+        <div class="fade-in-right">
+          <p>
+            Developed a complete e-commerce website using the MERN stack (MongoDB, Express, React, Node.js). 
+            Implemented user authentication, product catalog, cart management, and order processing.
+            <br>
+            - <strong>Back-end:</strong> Built with Node.js and Express.js to manage APIs and handle order logic.<br>
+            - <strong>Front-end:</strong> Designed with React.js for a dynamic and responsive user experience.<br>
+            - <strong>Database:</strong> Used MongoDB to securely store user and product data.
+          </p>
+          <a href="https://github.com/minhquan1627/Project_MernStack.git">View on GitHub</a>
+        </div>
+      </div>
+      <div class="project">
+        <div class="fade-in-left">
+          <h3>AI Detection Face</h3>
+          <p>Role: Setup Data, Label Data, Training Model AI</p>
+        </div>
+        <div class="fade-in-right">
+          <p>
+            <br>
+            - <strong>Collecting images:</strong> Used Mi AI to find and save face pictures with different angles, expressions, and lighting.
+<br>
+            - <strong>Labeling data:</strong> CVAT to mark faces in pictures by drawing boxes and making a training dataset.<br>
+            - <strong>Training the model:</strong> Used YOLO11n to recognize faces, adjusted settings to improve performance. The
+model achieved 74% accuracy on a dataset of 500 images.<br>
+             - <strong>Testing the model:</strong> Used OpenCV to check face detection on live video and show results
+          </p>
+          <a href="https://github.com/minhquan1627/Project_detection_face.git">View on GitHub</a>
+        </div>
+      </div>
+  </section>
+<section id="skills">
+  <h2>My Skill</h2>
+  <div class="skills fade-in-left">
+    <ul>
+        <li><i class="fab fa-python" style="color:#306998;"></i><span>Python</span></li>
+        <li><i class="fab fa-js-square" style="color:#f7df1e;"></i><span>JavaScript</span></li>
+        <li><i class="fas fa-server" style="color:#4DB33D;"></i><span>MERN Stack</span></li>
+        <li><i class="fas fa-robot" style="color:#ff6f61;"></i><span>Machine Learning (basic)</span></li>
+        <li><i class="fas fa-eye" style="color:#0099ff;"></i><span>Computer Vision (basic)</span></li>
+        <li><i class="fas fa-bolt" style="color:#ffd700;"></i><span>Fast Learner</span></li>
+    </ul>
+
+  </div>
+</section>
+
+
+
+  <footer id="contact">
+    <div>
+      <h2>Contact Me</h2>
+      <p>Email: minhquan1627@gmail.com</p>
+      <p>Phone: +84 0345 002 128</p>
+    </div>
+  </footer>
+
+  <script>
+    const fadeElements = document.querySelectorAll('.fade-in-left, .fade-in-right');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    fadeElements.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
